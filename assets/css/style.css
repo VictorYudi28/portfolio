@@ -467,6 +467,14 @@ footer{
         margin-top: 150px;
     }
 
+    .description-photo{
+        margin-top: 0;
+    }
+
+    #section-prin .description-portfolio{
+        align-items: center;
+    }
+
 }
 
 @media(max-width: 875px){
@@ -486,10 +494,6 @@ footer{
 
     .menu-mobile{
         display: block;
-    }
-
-    #section-prin .description-portfolio{
-        align-items: center;
     }
 
     #section-prin .description-portfolio h1,
