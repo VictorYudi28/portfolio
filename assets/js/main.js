@@ -36,38 +36,6 @@ document.addEventListener('scroll', () => {
     headerPage.classList.add('box-shadow-header');
 });
 
-// Vídeos Projects //
-
-const videoSpotify = document.getElementById('video-spotify');
-const buttonVideoSpotify = document.querySelector('.button-video-spotify');
-
-buttonVideoSpotify.addEventListener('click', () => {
-    
-   if(videoSpotify.paused){
-        videoSpotify.play();
-        buttonVideoSpotify.innerHTML = "Pause";
-   } else{
-        videoSpotify.pause();
-        buttonVideoSpotify.innerHTML = "Play";
-   }
-
-});
-
-const videoNetlix = document.getElementById('video-netflix');
-const buttonVideoNetflix = document.querySelector('.button-video-netflix');
-
-buttonVideoNetflix.addEventListener('click', () => {
-    
-    if(videoNetlix.paused){
-        videoNetlix.play();
-        buttonVideoNetflix.innerHTML = "Pause";
-    }else{
-        videoNetlix.pause();
-        buttonVideoNetflix.innerHTML = "Play";
-    }
- 
-});
-
 
 
 

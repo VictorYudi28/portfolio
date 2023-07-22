@@ -366,26 +366,10 @@ header{
     font-size: 1.7vmin;
 }
 
-.widget-projects .button-video{
-    padding: 12px 45px;
-    background-color: var(--bg-principal);
-    color: var(--bg-gray);
-    border: 0px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.5s;
-    font-size: 17px;
-    font-weight: 500;
-}
-
-.widget-projects .button-video:hover{
-    background-color: var(--bg-principal-hover);
-}
-
-.widget-projects video{
+.widget-projects img{
+    max-width: 600px;
     width: 100%;
     border-radius: 20px;
-    display: block;
 }
 
 /* Section Professional */
@@ -559,6 +543,7 @@ footer{
         font-size: 4vmin;
     }
 
+
 }
 
 @media(max-width: 400px){
@@ -575,9 +560,8 @@ footer{
         font-size: 120px;
     }
 
-    .widget-projects .button-video{
-        padding: 7px 25px;
-        font-size: 12px;
+    .cont-projects .widget-projects{
+        padding: 15px;
     }
 
     .logo a{
