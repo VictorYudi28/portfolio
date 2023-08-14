@@ -36,6 +36,64 @@ document.addEventListener('scroll', () => {
     headerPage.classList.add('box-shadow-header');
 });
 
+// hover tech //
+
+const boxTech = document.querySelectorAll('.ability-widget');
+
+boxTech.forEach( element => {
+    
+    element.addEventListener('mouseover', (e)=> {
+        
+        trocaCor(e.target); 
+
+    });  
+
+})
+
+function trocaCor(elementoClicado){
+    const titleBoxTech = elementoClicado.querySelector('.title-tech');
+
+    if(titleBoxTech.textContent.toLowerCase() === 'html'){
+        titleBoxTech.classList.add('color-html');
+    }else{
+        if(titleBoxTech.textContent.toLowerCase() === 'css'){
+            titleBoxTech.classList.add('color-css');
+        }else{
+            if(titleBoxTech.textContent.toLowerCase() === 'javascript'){
+                titleBoxTech.classList.add('color-javascript');
+            }else{
+                if(titleBoxTech.textContent.toLowerCase() === 'java'){
+                    titleBoxTech.classList.add('color-java');
+                }else{
+                    if(titleBoxTech.textContent.toLowerCase() === 'git'){
+                        titleBoxTech.classList.add('color-git');
+                    }else{
+                        if(titleBoxTech.textContent.toLowerCase() === 'github'){
+                            titleBoxTech.classList.add('color-github');
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+// Animation Scroll // 
+
+const observer = new IntersectionObserver( entries => {
+
+    entries[0].target.classList.add('init-hidden-off');
+
+}, {
+    threshold: [0, .5, 1]
+});
+
+Array.from(document.querySelectorAll('.init-hidden'));
+
+Array.from(document.querySelectorAll('.init-hidden')).forEach( element => {
+    observer.observe(element);
+});
 
 
 
