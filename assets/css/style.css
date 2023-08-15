@@ -113,13 +113,6 @@ ul{
     color: #171515;
 }
 
-.transition-icon{
-    transition: .5s;
-}
-
-.roda-icon{
-    transform: rotate(720deg);
-}
 
 /* Header */
 
@@ -311,13 +304,13 @@ header{
 }
 
 .ability-widget{
-    width: 27%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 42vh;
+    min-height: 350px;
     gap: 10px;
     background-color: var(--bg-gray);
     color: var(--color-black);
@@ -361,11 +354,6 @@ header{
 .ability-widget h2{
     font-size: 4vmin;
     font-weight: bold;
-}
-
-.ability-widget p{
-    text-align: center;
-    font-size: 1.8vmin;
 }
 
 /* Section Projects */
@@ -590,25 +578,16 @@ footer{
         font-size: 4vmin;
     }
 
-    .ability-widget p{
-        font-size: 2.4vmin;
-    }
-
-
 }
 
 @media(max-width: 480px){
 
     .ability-widget h2{
-        font-size: 5vmin;
-    }
-
-    .ability-widget p{
-        font-size: 3.5vmin;
+        font-size: 6vmin;
     }
 
     .ability-widget{
-        height: auto;
+        min-height: 300px;
     }
 
     .cont-professional h2{
