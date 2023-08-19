@@ -2,6 +2,9 @@
   💻<br>Portfólio - Victor Yudi
 </h1>
 
+<p>Link do Deploy: </p>
+<p>https://victoryudi28.github.io/portfolio/</p>
+
 ## 📚 Seções
 
 O site é composto por cinco seções:
