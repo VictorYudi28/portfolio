@@ -79,21 +79,6 @@ function trocaCor(elementoClicado){
 
 }
 
-// Animation Scroll // 
-
-const observer = new IntersectionObserver( entries => {
-
-    entries[0].target.classList.add('init-hidden-off');
-
-}, {
-    threshold: [0, .5, 1]
-});
-
-Array.from(document.querySelectorAll('.init-hidden'));
-
-Array.from(document.querySelectorAll('.init-hidden')).forEach( element => {
-    observer.observe(element);
-});
 
 
 
