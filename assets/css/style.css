@@ -108,6 +108,10 @@ ul{
     color: #171515;
 }
 
+.color-bootstrap{
+    color: #563d7c;
+}
+
 
 /* Header */
 
@@ -346,6 +350,10 @@ header{
     color: #171515;
 }
 
+.icon-bootstrap{
+    color: #563d7c;
+}
+
 .ability-widget h2{
     font-size: 4vmin;
     font-weight: bold;
@@ -371,7 +379,7 @@ header{
 }
 
 .cont-projects .widget-projects{
-    width: 45%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -468,6 +476,23 @@ header{
 
 .contact p{
     font-size: 2vmin;
+}
+
+.btn-cv{
+    color: var(--bg-gray);
+    display: inline-block;
+    margin-top: 5px;
+    background-color: var(--bg-principal);
+    padding: 15px 10px;
+    border-radius: 12px;
+    transition: 0.3s;
+    transform: scale(1);
+    font-weight: 600;
+}
+
+.btn-cv:hover{
+    transform: scale(1.1);
+    background-color: var(--bg-principal-hover);
 }
 
 /* Footer */
