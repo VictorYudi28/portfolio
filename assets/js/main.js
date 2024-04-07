@@ -73,7 +73,7 @@ const arrayObjetosHabilidades = [
     {
         iconClass: "fa-brands fa-bootstrap ability-icon icon-bootstrap icon-bootstrap",
         nomeTecnologia: "Bootstrap"
-    }
+    },
 
     
 
@@ -199,14 +199,6 @@ arrayObjetosProjetos.forEach( objetoProjeto => {
     `
 
 })
-
-// Download cv
-
-const btnCv = document.querySelector('.btn-cv');
-
-btnCv.setAttribute('href','./assets/cv/CV Victor Yudi Abe de Almeida.pdf');
-btnCv.setAttribute('download','CV Victor Yudi Abe de Almeida.pdf');
-
 
 
 
