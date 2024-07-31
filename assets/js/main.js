@@ -85,7 +85,7 @@ arrayObjetosHabilidades.forEach( objetoHabilidade => {
     
     containerAbility.innerHTML += `
     
-    <div class="ability-widget" data-name-tech="html">
+    <div class="ability-widget">
         <i class="${objetoHabilidade.iconClass}"></i>
         <h2 class="title-tech">${objetoHabilidade.nomeTecnologia}</h2>
     </div>
@@ -97,85 +97,64 @@ arrayObjetosHabilidades.forEach( objetoHabilidade => {
 // hover tech //
 
 const boxTech = document.querySelectorAll('.ability-widget');
-let nameTech = ["html","css","javascript","java","git","github","bootstrap"]
+let nameTech = ["html","css","javascript","java","git","github","bootstrap"];
 
 boxTech.forEach( element => {
+
+    let techMouseOver;
     
     element.addEventListener('mouseover', (e)=> {
         
-        trocaCor(e.target); 
+        let titleTech = e.currentTarget.querySelector('.title-tech');
+        techMouseOver = titleTech.innerText;
 
-    });  
+        for(let i = 0 ; i < nameTech.length; i++){
+
+            if(nameTech[i] === techMouseOver.toLowerCase()){
+
+                titleTech.classList.add(`color-${nameTech[i]}`);
+
+            }
+
+            element.addEventListener('mouseout',()=>{
+
+                titleTech.classList.remove(`color-${nameTech[i]}`);
+        
+            })
+
+        }
+
+    });
+
 
 })
-
-function trocaCor(elementoClicado){
-    const titleBoxTech = elementoClicado.querySelector('.title-tech');
-
-    if(titleBoxTech.textContent.toLowerCase() === 'html'){
-        titleBoxTech.classList.add('color-html');
-    }else{
-        if(titleBoxTech.textContent.toLowerCase() === 'css'){
-            titleBoxTech.classList.add('color-css');
-        }else{
-            if(titleBoxTech.textContent.toLowerCase() === 'javascript'){
-                titleBoxTech.classList.add('color-javascript');
-            }else{
-                if(titleBoxTech.textContent.toLowerCase() === 'java'){
-                    titleBoxTech.classList.add('color-java');
-                }else{
-                    if(titleBoxTech.textContent.toLowerCase() === 'git'){
-                        titleBoxTech.classList.add('color-git');
-                    }else{
-                        if(titleBoxTech.textContent.toLowerCase() === 'github'){
-                            titleBoxTech.classList.add('color-github');
-                        }else{
-                            if(titleBoxTech.textContent.toLowerCase() === 'bootstrap'){
-                                titleBoxTech.classList.add('color-bootstrap');
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-}
 
 // objetos projetos
 
 const arrayObjetosProjetos = [
 
     {
-        titulo: "Projeto Spotify",
-        tecnologiasUtilizadas: "Feito com HTML e CSS <br> responsivo",
-        imagem: "FotoCloneSpotify.png",
-        altImagem: "Foto do projeto: Clone Spotify",
-        linkGitHub: "https://github.com/VictorYudi28/cloneSpotify"
-    },
-
-    {
-        titulo: "Projeto Netflix",
-        tecnologiasUtilizadas: "Feito com HTML e CSS <br> responsivo",
-        imagem: "FotoCloneNetflix.png",
-        altImagem: "Foto do projeto: Clone Netflix",
-        linkGitHub: "https://github.com/VictorYudi28/cloneNetflix"
+        titulo: "Projeto Busca Títulos",
+        tecnologiasUtilizadas: " Feito em HTML , CSS , <br> JS e Consumo de API",
+        imagem: "FotoProjetoBuscaTitulos.png",
+        altImagem: "Foto do projeto: Busca Títulos",
+        linkGitHub: "https://github.com/VictorYudi28/projetoBuscaTitulos"
     },
 
     {
         titulo: "Projeto Calculadora IMC",
         tecnologiasUtilizadas: " Feito em HTML , CSS e <br> JS ",
-        imagem: "FotoCalculaImc.png",
+        imagem: "FotoProjetoCalculadoraImc.png",
         altImagem: "Foto do projeto: Calculadora IMC",
         linkGitHub: "https://github.com/VictorYudi28/calculadoraIMC"
     },
 
     {
-        titulo: "Projeto Drone",
-        tecnologiasUtilizadas: " Feito em HTML , CSS , Bootstrap e <br> JS ",
-        imagem: "FotoProjetoDrone.png",
-        altImagem: "Foto do projeto: Drone",
-        linkGitHub: "https://github.com/VictorYudi28/projetoDrone"
+        titulo: "Projeto Relógio",
+        tecnologiasUtilizadas: " Feito em HTML , CSS e <br> JS ",
+        imagem: "FotoProjetoRelogio.png",
+        altImagem: "Foto do projeto: Relógio",
+        linkGitHub: "https://github.com/VictorYudi28/projetoRelogio?tab=readme-ov-file"
     }
 
 ];
@@ -199,10 +178,3 @@ arrayObjetosProjetos.forEach( objetoProjeto => {
     `
 
 })
-
-
-
-
-
-
-
