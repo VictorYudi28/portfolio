@@ -42,45 +42,59 @@ const arrayObjetosHabilidades = [
 
     {
         srcIcon: "./assets/images/ability-image/html-5-svgrepo-com.svg",
-        nomeTecnologia: "HTML"
+        nomeTecnologia: "HTML",
+        dataNomeTecnologia: "Html"
     },
 
     {
         srcIcon: "./assets/images/ability-image/css-3-svgrepo-com.svg",
-        nomeTecnologia: "CSS"
+        nomeTecnologia: "CSS",
+        dataNomeTecnologia: "Css"
     },
 
     {
         srcIcon: "./assets/images/ability-image/js-official-svgrepo-com.svg",
-        nomeTecnologia: "Javascript"
+        nomeTecnologia: "Javascript",
+        dataNomeTecnologia: "Javascript"
     },
 
     {
         srcIcon: "./assets/images/ability-image/java-svgrepo-com.svg",
-        nomeTecnologia: "Java"
+        nomeTecnologia: "Java",
+        dataNomeTecnologia: "Java"
+    },
+    {
+        srcIcon: "./assets/images/ability-image/Logo_C_sharp.svg",
+        nomeTecnologia: "C#",
+        dataNomeTecnologia: "Csharp"
     },
 
     {
         srcIcon: "./assets/images/ability-image/git-svgrepo-com.svg",
-        nomeTecnologia: "Git"
+        nomeTecnologia: "Git",
+        dataNomeTecnologia: "Git"
     },
 
     {
         srcIcon: "./assets/images/ability-image/github-142-svgrepo-com.svg",
-        nomeTecnologia: "GitHub"
+        nomeTecnologia: "GitHub",
+        dataNomeTecnologia: "Github"
     },
 
     {
         srcIcon: "./assets/images/ability-image/icons8-bootstrap-480.svg",
-        nomeTecnologia: "Bootstrap"
+        nomeTecnologia: "Bootstrap",
+        dataNomeTecnologia: "Bootstrap"
     },
     {
         srcIcon: "./assets/images/ability-image/tailwindcss-icon-svgrepo-com.svg",
-        nomeTecnologia: "TailwindCSS"
+        nomeTecnologia: "TailwindCSS",
+        dataNomeTecnologia: "Tailwindcss"
     },
     {
         srcIcon: "./assets/images/ability-image/typescript-svgrepo-com.svg",
-        nomeTecnologia: "Typescript"
+        nomeTecnologia: "Typescript",
+        dataNomeTecnologia: "Typescript"
     },
 
     
@@ -94,7 +108,7 @@ arrayObjetosHabilidades.forEach( objetoHabilidade => {
     containerAbility.innerHTML += `
     
     <div class="ability-widget">
-        <img src="${objetoHabilidade.srcIcon}" alt="icone tecnologia ${objetoHabilidade.nomeTecnologia}" class="ability-icon">
+        <img src="${objetoHabilidade.srcIcon}" alt="icone tecnologia ${objetoHabilidade.nomeTecnologia}" class="ability-icon" data-nometecnologia="${objetoHabilidade.dataNomeTecnologia}">
         <h2 class="title-tech">${objetoHabilidade.nomeTecnologia}</h2>
     </div>
 
@@ -105,7 +119,7 @@ arrayObjetosHabilidades.forEach( objetoHabilidade => {
 // hover tech //
 
 const boxTech = document.querySelectorAll('.ability-widget');
-let nameTech = ["html","css","javascript","java","git","github","bootstrap","tailwindcss","typescript"];
+let nameTech = ["html","css","javascript","java","git","github","bootstrap","tailwindcss","typescript","csharp"];
 
 boxTech.forEach( element => {
 
@@ -113,8 +127,8 @@ boxTech.forEach( element => {
     
     element.addEventListener('mouseover', (e)=> {
         
-        let titleTech = e.currentTarget.querySelector('.title-tech');
-        techMouseOver = titleTech.innerText;
+        let titleTech = element.querySelector('.title-tech');
+        techMouseOver = element.querySelector('img').getAttribute('data-nometecnologia');
 
         for(let i = 0 ; i < nameTech.length; i++){
 
