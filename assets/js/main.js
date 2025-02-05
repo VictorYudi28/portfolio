@@ -41,38 +41,46 @@ document.addEventListener('scroll', () => {
 const arrayObjetosHabilidades = [
 
     {
-        iconClass: "fa-brands fa-html5 ability-icon icon-html",
+        srcIcon: "./assets/images/ability-image/html-5-svgrepo-com.svg",
         nomeTecnologia: "HTML"
     },
 
     {
-        iconClass: "fa-brands fa-css3-alt ability-icon icon-css",
+        srcIcon: "./assets/images/ability-image/css-3-svgrepo-com.svg",
         nomeTecnologia: "CSS"
     },
 
     {
-        iconClass: "fa-brands fa-square-js ability-icon icon-js",
+        srcIcon: "./assets/images/ability-image/js-official-svgrepo-com.svg",
         nomeTecnologia: "Javascript"
     },
 
     {
-        iconClass: "fa-brands fa-java ability-icon icon-java",
+        srcIcon: "./assets/images/ability-image/java-svgrepo-com.svg",
         nomeTecnologia: "Java"
     },
 
     {
-        iconClass: "fa-brands fa-git-alt ability-icon icon-git",
+        srcIcon: "./assets/images/ability-image/git-svgrepo-com.svg",
         nomeTecnologia: "Git"
     },
 
     {
-        iconClass: "fa-brands fa-github ability-icon icon-git-hub",
+        srcIcon: "./assets/images/ability-image/github-142-svgrepo-com.svg",
         nomeTecnologia: "GitHub"
     },
 
     {
-        iconClass: "fa-brands fa-bootstrap ability-icon icon-bootstrap icon-bootstrap",
+        srcIcon: "./assets/images/ability-image/icons8-bootstrap-480.svg",
         nomeTecnologia: "Bootstrap"
+    },
+    {
+        srcIcon: "./assets/images/ability-image/tailwindcss-icon-svgrepo-com.svg",
+        nomeTecnologia: "TailwindCSS"
+    },
+    {
+        srcIcon: "./assets/images/ability-image/typescript-svgrepo-com.svg",
+        nomeTecnologia: "Typescript"
     },
 
     
@@ -86,7 +94,7 @@ arrayObjetosHabilidades.forEach( objetoHabilidade => {
     containerAbility.innerHTML += `
     
     <div class="ability-widget">
-        <i class="${objetoHabilidade.iconClass}"></i>
+        <img src="${objetoHabilidade.srcIcon}" alt="icone tecnologia ${objetoHabilidade.nomeTecnologia}" class="ability-icon">
         <h2 class="title-tech">${objetoHabilidade.nomeTecnologia}</h2>
     </div>
 
@@ -97,7 +105,7 @@ arrayObjetosHabilidades.forEach( objetoHabilidade => {
 // hover tech //
 
 const boxTech = document.querySelectorAll('.ability-widget');
-let nameTech = ["html","css","javascript","java","git","github","bootstrap"];
+let nameTech = ["html","css","javascript","java","git","github","bootstrap","tailwindcss","typescript"];
 
 boxTech.forEach( element => {
 
@@ -155,6 +163,22 @@ const arrayObjetosProjetos = [
         imagem: "FotoProjetoRelogio.png",
         altImagem: "Foto do projeto: Relógio",
         linkGitHub: "https://github.com/VictorYudi28/projetoRelogio?tab=readme-ov-file"
+    },
+
+    {
+        titulo: "Projeto Climatempo",
+        tecnologiasUtilizadas: " Feito em HTML , CSS , <br> JS , TS e Consumo de API",
+        imagem: "FotoProjetoClimatempo.PNG",
+        altImagem: "Foto do projeto: Climatempo",
+        linkGitHub: "https://github.com/VictorYudi28/climatempo"
+    },
+
+    {
+        titulo: "Projeto Validador",
+        tecnologiasUtilizadas: " Feito em HTML , CSS , <br> JS , TS e TailwindCSS",
+        imagem: "FotoProjetoValidador.PNG",
+        altImagem: "Foto do projeto: Validador",
+        linkGitHub: "https://github.com/VictorYudi28/validador"
     }
 
 ];
@@ -169,7 +193,7 @@ arrayObjetosProjetos.forEach( objetoProjeto => {
     <div class="widget-projects">
         <h2>${objetoProjeto.titulo}</h2>
         <p>${objetoProjeto.tecnologiasUtilizadas}</p>
-        <img src="./assets/images/${objetoProjeto.imagem}" alt="${objetoProjeto.altImagem}">
+        <img src="./assets/images/project-image/${objetoProjeto.imagem}" alt="${objetoProjeto.altImagem}">
         <a href="${objetoProjeto.linkGitHub}" target="_blank">
             <i class="fa-brands fa-github icon-widget"></i>
         </a>
