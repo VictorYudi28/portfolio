@@ -1,9 +1,8 @@
-import { motion } from "framer-motion"
 import { Title } from "./Title"
 
 export const Hero = () => {
 
-    const cv = 'Curriculo Victor Yudi Abe de Almeida.pdf'
+    const cv = 'Cv Victor Yudi Abe de Almeida.pdf'
 
     return (
         <section className=" flex flex-col lg:flex lg:flex-row-reverse lg:gap-4 lg:items-center min-h-screen justify-center items-center">
