@@ -5,7 +5,7 @@ import { ProjectType } from "@/types/ProjectType";
 export const projects: ProjectType[] = [
     {
         id: 1,
-        title: 'Quiz',
+        title: 'Clone Netflix',
         description: 'O Clone Netflix é um projeto desenvolvido com React, Tailwind CSS e React Query, focado na construção da interface de uma plataforma de streaming inspirada no Netflix.',
         image: 'NetflixCoracoesDeFerro.PNG',
         technologies: ['React','TailwindCSS','Typescript','React Query'],
